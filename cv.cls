@@ -53,3 +53,8 @@
 % BoldItalicFont = Erewhon-BoldItalic,
 % SmallCapsFeatures = {Letters = SmallCaps}
 % ]{Erewhon-Regular}
+
+\newenvironment{chronoitem}[3]
+{{\bf #1}, {\it #2} \hfill \textbf{#3}\par\footnotesize}
+  % Content goes here
+{\vspace{.5cm}\normalsize}
