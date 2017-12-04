@@ -10,9 +10,10 @@
 \RequirePackage{hyperref}
 
 \hypersetup{
-  colorlinks = false,
-  allbordercolors = {0 0 0},
-  pdfborderstyle = {/S/U/W 1.2}%
+  hidelinks = true,
+  % colorlinks = false,
+  % allbordercolors = {0 0 0},
+  % pdfborderstyle = {/S/U/W 1.2}%
 }
 
 % Adding new definition commands
