@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{fsc}[2017/12/01 Classe LaTeX para FSC da UnB]
+\ProvidesClass{cv}[2017/12/01 Classe LaTeX para FSC da UnB]
 
 \LoadClass[a4paper, 10pt]{article}
 
@@ -9,6 +9,11 @@
 \RequirePackage{color}
 \RequirePackage{hyperref}
 
+\RequirePackage[default,osfigures,scale=0.9]{opensans}
+\RequirePackage[T1]{fontenc}
+
+
+% Defining link layout
 \hypersetup{
   hidelinks = true,
   % colorlinks = false,
@@ -45,15 +50,6 @@
   \@mailto \hfill \@github \hfill \@phone \hfill \@location \\
   \rule{\linewidth}{0.5mm} \\
 }
-
-% \usepackage{fontspec} % Required for specification of custom fonts
-% \setmainfont[Path = ./fonts/,
-% Extension = .otf,
-% BoldFont = Erewhon-Bold,
-% ItalicFont = Erewhon-Italic,
-% BoldItalicFont = Erewhon-BoldItalic,
-% SmallCapsFeatures = {Letters = SmallCaps}
-% ]{Erewhon-Regular}
 
 \newenvironment{chronoitem}[3]
 {{\bf #1}, {\it #2} \hfill \textbf{#3}\par\footnotesize}
