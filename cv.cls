@@ -9,9 +9,9 @@
 \RequirePackage{color}
 \RequirePackage{hyperref}
 
-\RequirePackage[default,osfigures,scale=0.9]{opensans}
-\RequirePackage[T1]{fontenc}
-
+% Setting default font: Helvetica
+\renewcommand*\rmdefault{phv}
+\renewcommand{\familydefault}{\sfdefault}
 
 % Defining link layout
 \hypersetup{
