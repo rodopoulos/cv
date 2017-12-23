@@ -35,7 +35,7 @@
 \definecolor{ocher}{RGB}{216, 215, 186}
 
 % Defining document color
-\pagecolor{ocher}
+% \pagecolor{ocher}
 
 % Removing paragraph first ident
 \setlength\parindent{0pt}
