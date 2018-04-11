@@ -1,14 +1,20 @@
 # LaTeX Makefile
 FILE=main
 
-all: cv clean
+all: pt clean
 
-cv:
-	@echo "Generating default curriculum (english)"
-	@pdflatex $(FILE) > /dev/null
-	@mv main.pdf cv-felipe-rodopoulos.pdf
+en:
+	@echo "Generating portuguese version (default)"
+	@pdflatex en.tex > /dev/null
+	@mv pt.pdf cv-felipe-rodopoulos.pdf
+	clean
+
+pt:
+	@echo "Generating portuguese version (default)"
+	@pdflatex pt.tex > /dev/null
+	@mv pt.pdf cv-felipe-rodopoulos.pdf
 
 clean:
-	@rm -f *.aux *.blg *.bbl *.log
+	@rm -f *.aux *.blg *.bbl *.log *.out *.fdb_latexmk *.fls
 
 .PHONY: all cv clean
