@@ -1,17 +1,18 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[2017/12/01 Classe LaTeX para FSC da UnB]
 
-\LoadClass[a4paper, 10pt]{article}
+\LoadClass[a4paper, 10.5pt]{article}
 
 \RequirePackage[hmargin=2cm, vmargin=2cm]{geometry}
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage{pagecolor}
 \RequirePackage{color}
-\RequirePackage{hyperref}
+\RequirePackage[pdfauthor={Felipe Rodopoulos},
+            pdftitle={Felipe Rodopoulos - Currilum Vitae}]{hyperref}
 
 % Setting default font: Helvetica
-\renewcommand*\rmdefault{phv}
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand*\rmdefault{phv}
+% \renewcommand{\familydefault}{\sfdefault}
 
 % Defining link layout
 \hypersetup{
@@ -29,7 +30,7 @@
 
 % Setting anchor definitions
 \def\@github{\href{https://www.github.com/\@githubuser}{github.com/\@githubuser}}
-\def\@mailto{\href{mailto:felipekss@gmail.com}{felipekss@gmail.com}}
+\def\@mailto{\href{mailto:\@email}{\@email}}
 
 % Defining background color
 \definecolor{ocher}{RGB}{216, 215, 186}

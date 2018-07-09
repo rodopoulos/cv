@@ -3,11 +3,10 @@ FILE=main
 
 all: pt clean
 
-en:
-	@echo "Generating portuguese version (default)"
+en: clean
+	@echo "Generating english version"
 	@pdflatex en.tex > /dev/null
-	@mv pt.pdf cv-felipe-rodopoulos.pdf
-	clean
+	@mv en.pdf cv-felipe-rodopoulos.pdf
 
 pt:
 	@echo "Generating portuguese version (default)"
