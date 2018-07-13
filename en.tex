@@ -1,75 +1,117 @@
-\documentclass{cv}
-\pagenumbering{gobble}
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
-% My info
-\title{Curriculum Vitae}
-\author{Felipe Rodopoulos de Oliveira}
-\phone{+55 (61) 99234 2360}
-\location{Brasília, Brazil}
-\githubuser{rodopoulos}
-\email{felipekss@gmail.com}
 
+\documentclass[11pt,a4paper,sans]{moderncv}  % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{oldstyle}    % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}        % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}  % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}           % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc} % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}       % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Felipe}{Rodopoulos de Oliveira}
+% optional, remove / comment the line if not wanted
+\address{Brasília, Brazil\\
+    +55~(61)~99234 2360\\
+    felipekss@gmail.com\\
+    github.com/rodopoulos
+}
+
+% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
-  \maketitle
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
 
-  \section{Education}
-  \begin{chronoitem}
-    {Pursuing MSc in Informatics} {University of Brasília} {2017 - Current}
-    Subject: formal verification of security protocols
-  \end{chronoitem}
+\section{Education}
+\cventry{February 2017 -- Present}{Master's Degree in Informatics}{University of Brasilia}{}{}{Master Thesis: \textit{``Formal verification of DAP, a banking transaction security protocol``}}  % arguments 3 to 6 can be left empty
 
-  \begin{chronoitem}
-    {BSc in Computer Science} {University of Brasília} {2010 - 2015}
-    Final Project: WebSpy - real-time monitoring and visualization of a host web traffic \\
-    \textbf{Awarded as best student of the semester}
-  \end{chronoitem}
+\cventry{March 2010 -- June 2015}{Bachelor in Computer Science}{University of Brasilia}{}{}{Graduated with honors in June 2015.\\Senior Thesis: \textit{``WebSpy - Real-time monitoring and visualization for web browsing''}}
 
-  \begin{chronoitem}
-    {Additional}{}{}
-    \begin{itemize}
-      \item[] Raspberry Pi 101 \hfill (16 hours - 2016)
-      \item[] Front-end Programming with Javascript and jQuery \hfill (40 hours - 2015)
-      \item[] Java and Object Oriented Programming \hfill (40 hours - 2013)
-    \end{itemize}
-  \end{chronoitem}
-  \vspace{-.5cm}
 
-  \section{Experience}
-  \begin{chronoitem}
-    {Network Administrator}{Brazilian Space Agency}{2013-2016}
-    Network monitoring with Nagios; development of administrative and security policies for corporate networks; design of a failure-proof and high availability DNS infrastructure; web development with Wordpress; maintenance of several web applications.
-  \end{chronoitem}
+\section{University}
+\cventry{January 2015 -- June 2015}{WebSpy}{graduation project}{}{}{Created and implemented a network exploitation tool in C++, which eavesdrops and replays in the attacker’s browser an HTTP/HTTPS session of a given victim from the local area network in real-time.}
 
-  \begin{chronoitem}
-    {Project Management Coordinator}{CJR (Junior Computing Company)}{2011-2013}
-    Web development with PHP, MySQL and HTML/CSS; lectured courses on Moodle, PHP, jQuery and MySQL; team and project management \par
-    \textbf{Awarded as best developer at 2012/2013 period}
-  \end{chronoitem}
-  \vspace{-.5cm}
+\cventry{March 2014 -- July 2014}{fd8-torrent}{Computer networking course}{}{}{Created and implemented a P2P distributed system for file sharing. The implementation was in C++ and consisted of a module for the communication between peers using UDP and TCP sockets, an HTTP server also implemented directly over TCP sockets and a web interface written in HTML, CSS and JavaScript served by the HTTP server.}
 
-  \section{Skills}
-  \begin{description}
-    \item[Languages:] C/C++, Go, Python and PHP
-    \item[Dev. Tools:] HTML, CSS (Sass), Docker, NPM, Gulp, cmake and Git
-    \item[Database:] MySQL, MongoDB
-    \item[Software:] \LaTeX, Wordpress, Joomla, Apache Server, BIND9, dnsmasq, Nagios, Samba
-  \end{description}
+\cventry{August 2014 -- December 2014}{Cnet compiler}{Compilers course}{}{}{Implemented a compiler for a subset of the C language with IPv4, IPv6 and MAC addresses as native types, using C and GNU Flex/Bison.}
 
-  \section{Projects}
-  \begin{chronoitem}{webspy}{graduation final project}{}
-    A network exploitation tool in C++, which eavesdrops and replays in real time, at the attacker's browser, a HTTP/HTTPS session of a given victim in the network
-  \end{chronoitem}
+\cventry{March 2018 -- July 2018}{Assistant Teacher}{Algorithms course}{}{}{Created and lectured several classes and tests for undergraduates at University of Brasilia as a requirement for the Master's degree. Topics included fundamental mathematics for complexity analysis comprehension, sorting, graphs and algorithmic paradigms.}
 
-  \begin{chronoitem}{fd8-torrent}{Teleinformatics and Networks course final project}{}
-    A distributed system for file sharing with an HTTP server for web user interface in C++, SDL, HTML, Javascript and CSS
-  \end{chronoitem}
 
-  \begin{chronoitem}{competitive programming}{personal project}{}
-    A repository with several of my solutions for programming problems from some online judges, commented and explained.
-  \end{chronoitem}
+\section{Experience}
+\cventry{March 2013 -- December 2016}{Network Administrator}{Brazilian Space Agency}{Brasília}{}{\begin{itemize}
+    \item Monitored networks using Nagios.
+    \item Implemented administrative security policies for corporate networks.
+    \item Designed a failure-proof DNS infrastructure.
+    \item Maintained several web applications and network services.
+    \item Developed components in Wordpress.
+\end{itemize}}
 
-  \begin{chronoitem}{cnet compiler}{Compilers course final project}{}
-    A compiler, made in C, for a subset of C language which can understand IPv4, IPv6 and MAC addresses and generate a three address code
-  \end{chronoitem}
+\cventry{March 2011 -- October 2013}{Project Management Coordinator}{CJR -- Computing Junior Enterprise}{University of Brasilia}{}{\begin{itemize}
+    \item Led the team of project managers of the company.
+    \item Developed web systems using PHP, MySQL, HTML, CSS and Javascript.
+    \item Lectured courses on Moodle, PHP, jQuery, MySQL and project management.
+    \item Awarded as best developer in 2012/2013 period.
+\end{itemize}}
+
+\cventry{July 2013 -- April 2018}{Web Development Freelancer}{}{}{}{Developed several websites solving specific problems for autonomous and enterprise clients, using PHP, HTML/CSS, Javascript, Gulp, NodeJS and Wordpress.}
+
+
+
+
+\section{Skills}
+\cvitem{Languages}{C, C++, Python, PHP, SQL}
+\cvitem{Databases}{MySQL, MongoDB}
+\cvitem{Software}{Git, Docker, \LaTeX, Apache Server, NPM, Gulp, BIND9, dnsmasq, Nagios}
+\cvitem{Hardware}{Raspberry Pi}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
 \end{document}
+
+%% end of file `template.tex'.
